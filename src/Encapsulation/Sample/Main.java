@@ -5,10 +5,9 @@ public class Main {
       Person person = new Person("John", 30);
       person.printDescription();  
 
-      person.setName("");  // error
-      person.setAge(150);  // error
+      person.setName("");  // print error
+      person.setAge(150);  // print error
 
-      // check result
       person.printDescription();  
   }
 }
