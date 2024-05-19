@@ -3,8 +3,8 @@ package Encapsulation.BusinessSample;
 import java.util.Random;
 
 public class UserOtp {
-  private final int OTP_LENGTH = 6;
   private final int MAX_SEND_TIMES = 3;
+  private final int MAX_TRY_TIMES = 3;
   private int sendTimes = 0;
   private int tryTimes = 0;
   private String lastAnswer = "";
@@ -29,6 +29,10 @@ public class UserOtp {
   }
 
   public boolean VerifyOtp(String otp) {
+    if (tryTimes >= MAX_TRY_TIMES) {
+      System.out.println("OTP verification failed. Maximum try times reached.");
+      return false;
+    }
     if (otp.equals(lastAnswer)) {
       System.out.println("OTP verified successfully.");
       return true;
