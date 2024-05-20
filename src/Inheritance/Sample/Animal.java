@@ -1,7 +1,7 @@
 public abstract class Animal {
-  public abstract void makeSound();
+  public abstract void MakeSound();
   
-  public void breathe() {
+  public void Breath() {
     System.out.println("Get Oxygen");
     System.out.println("Release Carbon Dioxide");
   }

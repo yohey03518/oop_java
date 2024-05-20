@@ -1,19 +1,19 @@
 public class Main {
     public static void main(String[] args) {
         Animal myAnimal = new Cat();
-        myAnimal.makeSound(); // output: Meow Meow
+        myAnimal.MakeSound(); // output: Meow Meow
 
         Animal myDog = new Dog();
-        myDog.makeSound(); // output: Woof Woof
+        myDog.MakeSound(); // output: Woof Woof
 
-        Animal[] myPets = getMyPets();
+        Animal[] myPets = GetMyPets();
         for (Animal pet : myPets) {
-            pet.breathe();
-            pet.makeSound();
+            pet.Breath();
+            pet.MakeSound();
         }
     }
 
-    public static Animal[] getMyPets() {
+    public static Animal[] GetMyPets() {
         return new Animal[] { new Dog(), new Cat() };
     }
 }
